@@ -1,135 +1,124 @@
-# Turborepo starter
+<div align="center">
 
-This Turborepo starter is maintained by the Turborepo core team.
+# 🎨 KidoPrint Monorepo
 
-## Using this example
+**Modern Printing Website — powered by Next.js, NestJS & Turborepo**
 
-Run the following command:
+![GitHub Repo stars](https://img.shields.io/github/stars/kecapasen/kido-print?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/kecapasen/kido-print?style=for-the-badge)
+![License](https://img.shields.io/badge/license-Private-red?style=for-the-badge)
 
-```sh
-npx create-turbo@latest
-```
+</div>
 
-## What's inside?
+---
 
-This Turborepo includes the following packages/apps:
+## 🧩 Tentang Proyek
 
-### Apps and Packages
+**KidoPrint** adalah website percetakan digital dengan tampilan **casual-aesthetic** yang menonjolkan identitas brand modern, ramah, dan profesional.  
+Dibangun dengan **arsitektur monorepo** menggunakan **Turborepo**, proyek ini memadukan kekuatan **Next.js (Frontend)** dan **NestJS (Backend)** agar proses pengembangan tetap efisien, scalable, dan mudah dikelola.
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `@repo/ui`: a stub React component library shared by both `web` and `docs` applications
-- `@repo/eslint-config`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `@repo/typescript-config`: `tsconfig.json`s used throughout the monorepo
+---
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+## 🚀 Tech Stack
 
-### Utilities
+**Frontend**
 
-This Turborepo has some additional tools already setup for you:
+- ⚛️ [Next.js 14 (App Router)](https://nextjs.org/)
+- 💨 [Tailwind CSS](https://tailwindcss.com/)
+- 🧱 [shadcn/ui](https://ui.shadcn.com/)
+- 🧑‍💻 TypeScript
 
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
+**Backend**
 
-### Build
+- 🧩 [NestJS](https://nestjs.com/)
+- 🔐 Class Validator & Transformer (DTO System)
+- 🗄️ [Prisma ORM](https://www.prisma.io/)
+- 🐬 MySQL Database
 
-To build all apps and packages, run the following command:
+**Build System**
 
-```
-cd my-turborepo
+- 🌀 [Turborepo](https://turbo.build/repo)
+- 🧰 [pnpm workspace](https://pnpm.io/)
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build
+---
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build
-yarn dlx turbo build
-pnpm exec turbo build
-```
+## 📁 Struktur Direktori
 
-You can build a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+````bash
+kido-print/
+├── apps/
+│   ├── web/            # Frontend (Next.js)
+│   └── server/         # Backend (NestJS)
+├── packages/            # Shared libraries (optional)
+├── turbo.json
+├── package.json
+└── README.md
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo build --filter=docs
+⚙️ Cara Menjalankan Proyek
+1. Clone Repository
+git clone https://github.com/kecapasen/kido-print.git
+cd kido-print
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo build --filter=docs
-yarn exec turbo build --filter=docs
-pnpm exec turbo build --filter=docs
-```
+2. Install Dependencies
+pnpm install
 
-### Develop
+3. Jalankan Server Development
 
-To develop all apps and packages, run the following command:
+Frontend (Next.js):
 
-```
-cd my-turborepo
+pnpm --filter web dev
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev
-yarn exec turbo dev
-pnpm exec turbo dev
-```
+Backend (NestJS):
 
-You can develop a specific package by using a [filter](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters):
+pnpm --filter server start:dev
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo dev --filter=web
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo dev --filter=web
-yarn exec turbo dev --filter=web
-pnpm exec turbo dev --filter=web
-```
+Atau sekalian jalanin dua-duanya:
 
-### Remote Caching
+pnpm dev
 
-> [!TIP]
-> Vercel Remote Cache is free for all plans. Get started today at [vercel.com](https://vercel.com/signup?/signup?utm_source=remote-cache-sdk&utm_campaign=free_remote_cache).
+🧰 Scripts yang Tersedia
+Command	Deskripsi
+pnpm dev	Menjalankan seluruh aplikasi (web + server) secara bersamaan
+pnpm build	Build seluruh aplikasi
+pnpm lint	Mengecek kualitas kode
+pnpm format	Memformat kode dengan Prettier
+pnpm --filter web dev	Menjalankan hanya frontend
+pnpm --filter server start:dev	Menjalankan hanya backend
+🌐 URL Default
+Aplikasi	URL
+Frontend (Next.js)	http://localhost:3000
 
-Turborepo can use a technique known as [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching) to share cache artifacts across machines, enabling you to share build caches with your team and CI/CD pipelines.
+Backend (NestJS)	http://localhost:5000
+💡 Tujuan Pengembangan
 
-By default, Turborepo will cache locally. To enable Remote Caching you will need an account with Vercel. If you don't have an account you can [create one](https://vercel.com/signup?utm_source=turborepo-examples), then enter the following commands:
+🔹 Membangun arsitektur yang scalable antara frontend dan backend.
 
-```
-cd my-turborepo
+🔹 Menggunakan Turborepo untuk workflow pengembangan yang cepat dan modular.
 
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo login
+🔹 Menjaga standar clean code, reusability, dan maintainability.
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo login
-yarn exec turbo login
-pnpm exec turbo login
-```
+🔹 Menghadirkan UI casual-aesthetic yang nyaman dilihat dan mudah digunakan.
 
-This will authenticate the Turborepo CLI with your [Vercel account](https://vercel.com/docs/concepts/personal-accounts/overview).
+🧑‍💻 Kontributor
+Nama	Peran	Teknologi
+Rizky Maulana	Fullstack Web Developer	Next.js, Tailwind, shadcn/ui, NestJS, Prisma, MySQL
+📸 Preview (Coming Soon)
 
-Next, you can link your Turborepo to your Remote Cache by running the following command from the root of your Turborepo:
+Halaman “Tentang Kami” (Casual Aesthetic Style)
+(Foto tim akan ditambahkan setelah proses design final selesai)
 
-```
-# With [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation) installed (recommended)
-turbo link
+🧠 Catatan Pribadi
 
-# Without [global `turbo`](https://turborepo.com/docs/getting-started/installation#global-installation), use your package manager
-npx turbo link
-yarn exec turbo link
-pnpm exec turbo link
-```
+Proyek ini dikembangkan sebagai latihan penerapan arsitektur monorepo (Turborepo) dengan kombinasi Next.js & NestJS.
 
-## Useful Links
+Fokus utama pengembangan adalah membangun struktur kode yang rapi, efisien, dan mudah dikembangkan untuk project skala menengah ke atas.
 
-Learn more about the power of Turborepo:
+📜 Lisensi
 
-- [Tasks](https://turborepo.com/docs/crafting-your-repository/running-tasks)
-- [Caching](https://turborepo.com/docs/crafting-your-repository/caching)
-- [Remote Caching](https://turborepo.com/docs/core-concepts/remote-caching)
-- [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
-- [Configuration Options](https://turborepo.com/docs/reference/configuration)
-- [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+Proyek ini bersifat pribadi dan digunakan untuk keperluan pembelajaran, latihan pengembangan, serta portfolio pribadi.
+Tidak untuk distribusi komersial tanpa izin tertulis.
+
+<div align="center"> <sub>💡 Dibangun dengan semangat oleh <b>Rizky Maulana</b> — 2025</sub><br/> <sub>“Code. Learn. Build. Repeat.”</sub> </div> ```
+````

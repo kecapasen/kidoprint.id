@@ -1,50 +1,151 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
 :root {
+  --radius: 0.625rem;
+
+  /* 🎨 Palette utama */
+  --pink: #ef476f;
+  --yellow: #ffd166;
+  --green: #06d6a0;
+  --blue: #118ab2;
+  --navy: #073b4c;
+
+  /* Mapping ke theme variables */
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: var(--navy);
+
+  --card: #ffffff;
+  --card-foreground: var(--navy);
+
+  --popover: #ffffff;
+  --popover-foreground: var(--navy);
+
+  --primary: var(--pink);
+  --primary-foreground: #ffffff;
+
+  --secondary: var(--yellow);
+  --secondary-foreground: var(--navy);
+
+  --accent: var(--green);
+  --accent-foreground: #ffffff;
+
+  --muted: #f6f6f6;
+  --muted-foreground: var(--navy);
+
+  --destructive: #ff4d4d;
+
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: var(--blue);
+
+  /* Bisa dipakai buat chart/ilustrasi */
+  --chart-1: var(--pink);
+  --chart-2: var(--yellow);
+  --chart-3: var(--green);
+  --chart-4: var(--blue);
+  --chart-5: var(--navy);
+
+  /* Sidebar */
+  --sidebar: #ffffff;
+  --sidebar-foreground: var(--navy);
+  --sidebar-primary: var(--blue);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--yellow);
+  --sidebar-accent-foreground: var(--navy);
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: var(--pink);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.dark {
+  --background: var(--navy);
+  --foreground: #ffffff;
+
+  --card: var(--blue);
+  --card-foreground: #ffffff;
+
+  --popover: var(--blue);
+  --popover-foreground: #ffffff;
+
+  --primary: var(--pink);
+  --primary-foreground: #ffffff;
+
+  --secondary: var(--yellow);
+  --secondary-foreground: var(--navy);
+
+  --accent: var(--green);
+  --accent-foreground: #ffffff;
+
+  --muted: #1e293b;
+  --muted-foreground: #cbd5e1;
+
+  --destructive: #ff6b6b;
+
+  --border: #2d3748;
+  --input: #334155;
+  --ring: var(--yellow);
+
+  --chart-1: var(--pink);
+  --chart-2: var(--yellow);
+  --chart-3: var(--green);
+  --chart-4: var(--blue);
+  --chart-5: #f1f5f9;
+
+  --sidebar: var(--navy);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: var(--pink);
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: var(--yellow);
+  --sidebar-accent-foreground: var(--navy);
+  --sidebar-border: #2d3748;
+  --sidebar-ring: var(--green);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
   }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-.imgDark {
-  display: none;
-}
-
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-
-  .imgLight {
-    display: none;
-  }
-  .imgDark {
-    display: unset;
+  body {
+    @apply bg-background text-foreground;
   }
 }
