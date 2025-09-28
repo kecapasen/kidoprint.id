@@ -68,8 +68,8 @@ kido-print/
 ### 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/kecapasen/kido-print.git
-cd kido-print
+git clone https://github.com/kecapasen/kidoprint.id.git
+cd kidoprint.id
 ```
 
 ### 2️⃣ Install Dependencies
