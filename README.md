@@ -4,8 +4,8 @@
 
 **Edukasi Digital Interaktif untuk Anak — powered by Next.js, NestJS & Turborepo**
 
-![GitHub Repo stars](https://img.shields.io/github/stars/kecapasen/kido-print?style=for-the-badge)
-![GitHub last commit](https://img.shields.io/github/last-commit/kecapasen/kido-print?style=for-the-badge)
+![GitHub Repo stars](https://img.shields.io/github/stars/kecapasen/kidoprint.id?style=for-the-badge)
+![GitHub last commit](https://img.shields.io/github/last-commit/kecapasen/kidoprint.id?style=for-the-badge)
 ![License](https://img.shields.io/badge/license-Private-red?style=for-the-badge)
 
 </div>
@@ -134,13 +134,6 @@ pnpm dev
 | Nama              | Peran                   | Teknologi                                           |
 | ----------------- | ----------------------- | --------------------------------------------------- |
 | **Rizky Maulana** | Fullstack Web Developer | Next.js, Tailwind, shadcn/ui, NestJS, Prisma, MySQL |
-
----
-
-📸 **Preview (Coming Soon)**
-
-> Halaman “Tentang Kami” & “Beranda” bertema _Casual Aesthetic Kids Learning_  
-> _(Akan ditambahkan setelah proses desain final selesai)_
 
 ---
 
