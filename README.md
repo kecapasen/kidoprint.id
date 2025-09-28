@@ -48,7 +48,7 @@ Proyek ini dibangun menggunakan **arsitektur monorepo** berbasis **Turborepo**, 
 ## 📁 Struktur Folder
 
 ```bash
-kido-print/
+kidoprint.id/
 │
 ├── apps/
 │ ├── web/ # Frontend (Next.js)
