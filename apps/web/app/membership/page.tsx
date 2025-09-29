@@ -63,7 +63,11 @@ export default function MembershipPage() {
           />
           <div className="container mx-auto px-6 text-center">
             <h1 className="font-baloo text-4xl md:text-6xl font-extrabold max-w-3xl mx-auto leading-tight">
-              Gabung KidoPrint Club!
+              Yuk, Gabung
+              <span className="text-primary text-shadow-foreground">
+                {" "}
+                KidoPrint Club!
+              </span>
             </h1>
             <p className="mt-6 lg:text-lg text-muted-foreground max-w-2xl mx-auto">
               Dapatkan worksheet baru setiap minggu dan akses ke ratusan koleksi

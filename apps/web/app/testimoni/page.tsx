@@ -90,7 +90,11 @@ export default function TestimoniPage() {
             />
             <div className="container relative z-10 mx-auto px-6">
               <h1 className="font-baloo text-4xl md:text-6xl font-extrabold text-foreground max-w-3xl mx-auto leading-tight">
-                Apa Kata Para Bunda & Pendidik Hebat?
+                Apa Kata Para
+                <span className="text-primary text-shadow-foreground">
+                  {" "}
+                  Ortu & Pendidik Hebat?
+                </span>
               </h1>
               <p className="mt-4 lg:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Kami senang bisa menjadi bagian dari perjalanan belajar si

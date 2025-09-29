@@ -120,24 +120,20 @@ export default function ProductsPage() {
             />
             <div className="container mx-auto px-6 text-center">
               <h1 className="font-baloo text-4xl md:text-6xl font-extrabold max-w-3xl mx-auto leading-tight">
-                Temukan Worksheet Favoritmu Di Sini!
+                Pilih Worksheet Seru untuk{" "}
+                <span className="text-primary text-shadow-foreground">
+                  {" "}
+                  Anakmu!
+                </span>
               </h1>
-              <p className="mt-6 lg:text-lg text-muted-foreground max-w-2xl mx-auto">
-                Pilih ratusan worksheet menarik untuk mendukung tumbuh kembang
-                anak — semuanya dirancang agar belajar jadi seru dan penuh
-                warna!
+              <p className="mt-4 text-muted-foreground">
+                Filter berdasarkan usia, tema, atau jenis aktivitas. Belajar
+                jadi menyenangkan setiap hari ✨
               </p>
-              <div className="mt-8 flex flex-col sm:flex-row justify-center items-center gap-4">
+              <div className="mt-8">
                 <Button
                   size="lg"
                   className="w-full sm:w-auto text-lg border border-foreground"
-                >
-                  Eksplor Semua Worksheet
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="w-full sm:w-auto text-foreground border border-foreground text-lg"
                 >
                   Lihat Sampel Gratis
                 </Button>
@@ -191,21 +187,19 @@ export default function ProductsPage() {
           <section className="py-20">
             <div className="container mx-auto px-6 text-center max-w-2xl">
               <h2 className="font-baloo text-2xl md:text-4xl font-bold text-center mx-auto">
-                Siap Ubah Belajar Jadi Petualangan Seru?
+                Coba Worksheet Gratis Sekarang!
               </h2>
+              <p className="mt-4 text-muted-foreground">
+                Download worksheet versi gratis dan rasakan keseruannya sebelum
+                membeli 💫
+              </p>
               <Button
                 asChild
                 size="lg"
                 variant="secondary"
                 className="w-full sm:w-auto mt-8 font-extrabold text-xl transform hover:scale-105 transition-transform border border-foreground"
               >
-                <Link
-                  href="https://bit.ly/JoinKidoPrintClub"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Gabung KidoPrint Club Sekarang!
-                </Link>
+                <Link href="/sampel-gratis">Lihat Sampel Gratis</Link>
               </Button>
             </div>
           </section>

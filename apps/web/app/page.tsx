@@ -101,10 +101,10 @@ export default function Homepage() {
             />
             <div className="container relative z-10 mx-auto px-6">
               <h1 className="font-baloo text-4xl md:text-6xl font-extrabold text-foreground max-w-3xl mx-auto leading-tight">
-                Ubah Waktu Belajar Jadi Petualangan
-                <span className="text-primary underline underline-offset-16 text-shadow-foreground">
+                Ubah Waktu Belajar Jadi
+                <span className="text-primary text-shadow-foreground">
                   {" "}
-                  Paling Seru!
+                  Petualangan Paling Seru!
                 </span>
               </h1>
               <p className="mt-6 lg:text-lg text-muted-foreground max-w-xl mx-auto">

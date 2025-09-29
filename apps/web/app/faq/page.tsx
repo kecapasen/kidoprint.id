@@ -14,6 +14,7 @@ import Header from "@/components/header";
 import Link from "next/link";
 const faqData = [
   {
+    icon: "puzzle",
     category: "💡 Tentang Produk Worksheet",
     questions: [
       {
@@ -31,6 +32,7 @@ const faqData = [
     ],
   },
   {
+    icon: "card",
     category: "💳 Pembelian & Membership",
     questions: [
       {
@@ -44,6 +46,7 @@ const faqData = [
     ],
   },
   {
+    icon: "documents",
     category: "🧾 Download & Penggunaan Worksheet",
     questions: [
       {
@@ -71,9 +74,11 @@ export default function FaqPage() {
           <section className="py-20">
             <div className="containetr mx-auto px-6 text-center">
               <h1 className="font-baloo text-4xl md:text-6xl font-extrabold max-w-3xl mx-auto leading-tight">
-                Punya Pertanyaan?
-                <br />
-                Yuk, Cari Jawabannya di Sini!
+                Punya Pertanyaan? Yuk,
+                <span className="text-primary text-shadow-foreground">
+                  {" "}
+                  Cari Jawabannya di Sini!
+                </span>
               </h1>
               <p className="mt-6 lg:text-lg text-muted-foreground max-w-2xl mx-auto">
                 Kumpulan jawaban dari pertanyaan yang paling sering ditanyakan
@@ -84,7 +89,7 @@ export default function FaqPage() {
         </Grid>
         <Separator />
         <section className="py-20">
-          <div className="container mx-auto px-6">
+          <div className="container mx-auto px-6 max-w-3xl">
             {faqData.map((category) => (
               <div key={category.category} className="mb-12">
                 <h2 className="font-baloo text-2xl md:text-4xl font-bold mb-6">

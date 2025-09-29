@@ -13,7 +13,7 @@ import {
   CardTitle,
 } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { Check, CheckCircle } from "lucide-react";
+import { Check } from "lucide-react";
 
 export default function AboutUsPage() {
   return (
@@ -37,7 +37,7 @@ export default function AboutUsPage() {
               height={512}
             />
             <div className="container mx-auto px-6 text-center flex flex-col items-center">
-              <Avatar className="h-64 w-64">
+              <Avatar className="h-48 w-48">
                 <AvatarFallback className="text-6xl font-bold">
                   RM
                 </AvatarFallback>
@@ -49,7 +49,7 @@ export default function AboutUsPage() {
               </Avatar>
               <h1 className="font-baloo text-4xl lg:text-6xl font-extrabold text-foreground max-w-3xl mx-auto leading-tight mt-6">
                 Yuk, Kenalan dengan Kakak Kreatif di Balik{" "}
-                <span className="text-primary underline underline-offset-16 text-shadow-foreground">
+                <span className="text-primary text-shadow-foreground">
                   {" "}
                   KidoPrint!
                 </span>
@@ -104,12 +104,12 @@ export default function AboutUsPage() {
               <div className="mt-12 grid md:grid-cols-2 gap-8 max-w-4xl mx-auto text-left">
                 <Card>
                   <CardHeader>
-                    <CardTitle className="font-baloo text-2xl">
+                    <CardTitle className="font-baloo text-2xl font-bold">
                       Visi Kami
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground italic">
+                    <p className="text-muted-foreground text-justify italic">
                       "Membantu jutaan orang tua di Indonesia menyediakan media
                       belajar yang seru dan berkualitas."
                     </p>
@@ -117,12 +117,12 @@ export default function AboutUsPage() {
                 </Card>
                 <Card>
                   <CardHeader>
-                    <CardTitle className="font-baloo text-2xl">
+                    <CardTitle className="font-baloo text-2xl font-bold">
                       Misi Kami
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 text-justify">
                       <li className="flex items-start">
                         <Check className="h-5 w-5 text-accent flex-shrink-0 mr-2 mt-1" />
                         <span className="text-muted-foreground">
