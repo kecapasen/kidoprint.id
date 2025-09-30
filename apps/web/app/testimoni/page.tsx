@@ -128,7 +128,7 @@ export default function TestimoniPage() {
                   className="text-left hover:-translate-y-2 transition-transform duration-300 p-0 justify-between gap-0"
                 >
                   <CardHeader className="pt-6">
-                    <p className="italic text-muted-foreground">
+                    <p className="italic text-muted-foreground line-clamp-4">
                       "{testimonial.quote}"
                     </p>
                   </CardHeader>

@@ -82,14 +82,14 @@ export default function AboutUsPage() {
                   edukasi dengan desain yang ceria dan modern.
                 </p>
               </div>
-              <div className="order-1 md:order-2 flex justify-center">
-                <Image
-                  src="/map.png"
-                  width={256}
-                  height={256}
-                  alt="Ilustrasi perjalanan KidoPrint"
-                  className="max-w-md"
-                />
+              <div className="order-1 md:order-2 flex justify-center items-center">
+                <Card className="w-full flex justify-center relative aspect-video overflow-hidden">
+                  <Image
+                    src="/path.jpg"
+                    fill
+                    alt="Ilustrasi perjalanan KidoPrint"
+                  />
+                </Card>
               </div>
             </div>
           </div>

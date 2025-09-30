@@ -241,7 +241,7 @@ export default function Homepage() {
                 className="text-left hover:-translate-y-2 transition-transform duration-300 p-0 justify-between gap-0"
               >
                 <CardHeader className="pt-6">
-                  <p className="text-muted-foreground italic">
+                  <p className="text-muted-foreground italic line-clamp-4">
                     "{testimonial.quote}"
                   </p>
                 </CardHeader>

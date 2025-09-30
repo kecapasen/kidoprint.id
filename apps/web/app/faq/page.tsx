@@ -7,6 +7,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
+import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
 import Grid from "@/components/grid";
 import Footer from "@/components/footer";
@@ -15,51 +16,51 @@ import Link from "next/link";
 const faqData = [
   {
     icon: "puzzle",
-    category: "💡 Tentang Produk Worksheet",
+    category: "Seputar Produk KidoPrint",
     questions: [
       {
-        q: "Apa itu worksheet KidoPrint?",
-        a: "Worksheet KidoPrint adalah lembar aktivitas edukatif dalam format PDF yang bisa diunduh dan dicetak. Dirancang khusus untuk anak usia 2–6 tahun agar proses belajar terasa lebih menyenangkan dan interaktif.",
+        q: "Worksheet KidoPrint itu apaan sih?",
+        a: "Anggap aja ini 'paket main' digital buat si kecil! Isinya lembaran aktivitas super seru dalam format PDF yang bisa Bunda download dan print sendiri di rumah. Didesain khusus biar belajar nulis, ngitung, dan mewarnai jadi petualangan yang asyik! ✨",
       },
       {
-        q: "Apakah worksheet-nya bisa dipakai ulang?",
-        a: "Bisa banget! Karena produk kami digital, setelah diunduh, worksheet bisa Bunda cetak berkali-kali tanpa batas. Cocok untuk latihan berulang atau jika si kecil ingin mencoba mewarnai dengan cara berbeda.",
+        q: "Bisa dipakai berkali-kali nggak?",
+        a: "Tentu aja! Ini enaknya punya produk digital. Setelah di-download, filenya jadi milik Bunda selamanya. Mau di-print 100 kali juga boleh! Jadi, kalau si kecil mau ngulang latihan atau mewarnai dengan warna baru, tinggal print lagi aja. Hemat kan? 😉",
       },
       {
-        q: "Apakah materinya sesuai untuk usia anak saya?",
-        a: "Tentu. Setiap produk kami beri label rekomendasi usia yang jelas (misal: 2-3 tahun, 4-5 tahun). Materinya kami susun secara bertahap, dari pengenalan dasar hingga aktivitas yang lebih kompleks, sesuai dengan milestone tumbuh kembang anak.",
+        q: "Materinya cocok nggak buat umur anakku?",
+        a: "Aman, Bun! Setiap paket KidoPrint selalu punya label rekomendasi usia yang jelas (misal: 2-3 tahun). Materinya udah kita susun kayak tangga, mulai dari yang paling gampang buat adek-adek sampai yang lebih menantang buat kakak-kakak, jadi pas banget sama tahap perkembangannya.",
       },
     ],
   },
   {
     icon: "card",
-    category: "💳 Pembelian & Membership",
+    category: "Pembelian & Membership",
     questions: [
       {
-        q: "Gimana cara beli worksheet satuan?",
-        a: "Sangat mudah! Bunda bisa langsung mengunjungi etalase kami di Lynk.id (link ada di bio Instagram). Cukup pilih produk, lakukan pembayaran via QRIS atau transfer, lalu worksheet siap diunduh.",
+        q: "Gimana cara belinya, Kak?",
+        a: "Gampang banget, Bun! Tinggal klik link di bio Instagram kami buat mampir ke 'toko' KidoPrint di Lynk.id. Pilih worksheet yang disuka, bayar pakai QRIS atau transfer, dan wusshh... filenya langsung siap di-download! Sat set sat set, langsung bisa main! 🚀",
       },
       {
-        q: "Apakah ada sistem langganan (membership)?",
-        a: "Ada, kami punya KidoPrint Club! Dengan bergabung menjadi member, Bunda akan mendapatkan worksheet premium baru setiap minggu dengan harga yang jauh lebih hemat. Untuk pendaftaran membership, saat ini kami layani secara personal melalui WhatsApp.",
+        q: "Ada langganan bulanan gitu nggak?",
+        a: "Ada doong, namanya KidoPrint Club! 👑 Ini buat para Bunda yang mau stok aktivitas tanpa batas. Dengan gabung jadi member, Bunda bakal dapat worksheet baru yang eksklusif tiap minggu dengan harga super hemat. Buat daftar jadi anggota VVIP ini, bisa langsung ngobrol sama Kakak Kreatif via WhatsApp ya!",
       },
     ],
   },
   {
     icon: "documents",
-    category: "🧾 Download & Penggunaan Worksheet",
+    category: "Download & Cetak Worksheet",
     questions: [
       {
-        q: "Setelah bayar, gimana cara download worksheet-nya?",
-        a: "Setelah pembayaran dikonfirmasi, Bunda akan segera menerima link download worksheet yang aman melalui email atau WhatsApp, tergantung di mana Bunda melakukan konfirmasi.",
+        q: "Habis bayar, filenya dikirim gimana?",
+        a: "Begitu pembayaran Bunda kami terima, tim Kakak Kreatif akan langsung kirim link download-nya secepat kilat! Link-nya aman dan bisa dikirim via email atau WhatsApp, sesuai kenyamanan Bunda.",
       },
       {
-        q: "Apakah worksheet-nya bisa dipakai di HP atau tablet?",
-        a: "Bisa. File kami berformat PDF yang bisa dibuka di semua perangkat. Namun, kami sangat merekomendasikan untuk mencetaknya di kertas agar si kecil bisa merasakan pengalaman belajar sensorik (menulis, mewarnai, menggunting) secara langsung.",
+        q: "Bisa dipake di tablet aja nggak, tanpa di-print?",
+        a: "Bisa kok dibuka di tablet atau HP, filenya kan PDF. Tapi... jujur ya, Bun, pengalaman paling serunya itu kalau di-print! Si kecil bisa beneran ngerasain sensasi megang pensil, menggunting kertas, dan mewarnai. Pengalaman 'nyata' ini bagus banget buat perkembangan sensoriknya. 🤗",
       },
       {
-        q: "Saya butuh kertas jenis apa untuk mencetak?",
-        a: "Kertas HVS biasa (ukuran A4, 70-80 gsm) sudah sangat cukup untuk sebagian besar aktivitas. Untuk hasil mewarnai yang lebih maksimal, Bunda bisa menggunakan kertas yang sedikit lebih tebal.",
+        q: "Harus pake kertas khusus buat nge-print?",
+        a: "Nggak perlu ribet, Bun! Kertas HVS A4 biasa yang buat nge-print di rumah itu udah oke banget. Tapi kalau mau hasil warnanya lebih 'jreng' dan nggak tembus, boleh coba pakai kertas yang sedikit lebih tebal, kayak kertas gambar. 😉",
       },
     ],
   },
@@ -92,9 +93,18 @@ export default function FaqPage() {
           <div className="container mx-auto px-6 max-w-3xl">
             {faqData.map((category) => (
               <div key={category.category} className="mb-12">
-                <h2 className="font-baloo text-2xl md:text-4xl font-bold mb-6">
-                  {category.category}
-                </h2>
+                <div className="flex items-center gap-2 mb-6">
+                  <Image
+                    src={`/${category.icon}.png`}
+                    alt="KidoPrint"
+                    width={32}
+                    height={32}
+                    className="inline-block"
+                  />
+                  <h2 className="font-baloo text-2xl md:text-4xl font-bold">
+                    {category.category}
+                  </h2>
+                </div>
                 <Accordion
                   type="single"
                   collapsible

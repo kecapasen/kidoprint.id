@@ -223,7 +223,7 @@ export default function MembershipPage() {
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl mx-auto">
             <Card className="text-left border border-foreground p-0 justify-between gap-0">
               <CardHeader className="pt-6">
-                <p className="italic text-muted-foreground">
+                <p className="italic text-muted-foreground line-clamp-4">
                   "Sejak gabung membership, aku nggak pernah kehabisan ide main
                   sama anak. Setiap minggu ada kejutan baru. Worth it banget!"
                 </p>
@@ -258,7 +258,7 @@ export default function MembershipPage() {
             </Card>
             <Card className="text-left border border-foreground p-0 justify-between gap-0">
               <CardHeader className="pt-6">
-                <p className="italic text-muted-foreground">
+                <p className="italic text-muted-foreground line-clamp-4">
                   "Awalnya ragu, tapi ternyata ini investasi terbaik buat
                   perkembangan anakku. Lebih hemat & praktis daripada beli
                   mainan terus-menerus."
